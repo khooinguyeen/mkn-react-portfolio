@@ -1,16 +1,41 @@
 import Loader from 'react-loaders'
 import './index.scss'
 import AnimatedLetters from '../AnimatedLetters'
-import { useEffect, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
+import emailjs from '@emailjs/browser'
+import { MapContainer, Marker, Popup, TileLayer } from 'react-leaflet'
 
 const Contact = () => {
     const [letterClass, setLetterClass] = useState('text-animate')
+    const refForm = useRef()
 
     useEffect(() => {
         return setTimeout(() => {
             setLetterClass('text-animate-hover')
         },3000)
     }, [])
+
+    const sendEmail = (e) => {
+        e.preventDefault()
+
+        emailjs
+            .sendForm(
+                'service_mkn1710',
+                'template_mkn1710',
+                refForm.current,
+                'PXvgQw2wiXhDs5phz'
+            )
+            .then(
+                () => {
+                    alert('Message successfully sent!')
+                    window.location.reload(false)
+                },
+                () => {
+                    alert('Failed to send the message, please try again')
+                }
+            )
+    }
+
     return (
         <>
             <div className='container contact-page'>
@@ -23,10 +48,10 @@ const Contact = () => {
                         />
                     </h1>
                     <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                     </p>
                     <div className='contact-form'>
-                        <form>
+                        <form ref={refForm} onSubmit={sendEmail}>
                             <ul>
                                 <li className='half'>
                                     <input type="text" name='name' placeholder='Name' required />
@@ -46,6 +71,25 @@ const Contact = () => {
                             </ul>
                         </form>
                     </div>
+                </div>
+                <div className='info-map'>
+                    Mai Khôi Nguyên,
+                    <br />
+                    Vietnam, TSQ apartment,
+                    <br />
+                    Mo Lao urban area,
+                    <br />
+                    Ha Dong, Hanoi
+                    <br />
+                    <span>khoinguyenmai17102005@gmail.com</span>
+                </div>
+                <div className='map-wrap'>
+                    <MapContainer center={[20.984470, 105.787030]} zoom={13}>
+                        <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
+                        <Marker position={[20.984470, 105.787030]}>
+                            <Popup>Nguyen lives here, come over for a cup of coffee :)</Popup>
+                        </Marker>
+                    </MapContainer>
                 </div>
             </div>
             <Loader type='pacman' />
