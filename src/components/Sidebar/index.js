@@ -17,10 +17,10 @@ const Sidebar = () => (
             <NavLink exact="true" activeClassName="active" to="/mkn-react-portfolio/">
                 <FontAwesomeIcon icon={faHome} color="#4d4d4e" />
             </NavLink>
-            <NavLink exact="true" activeClassName="active" className="about-link" to="/mkn-react-portfolio/about">
+            <NavLink exact="true" activeClassName="active" className="about-link" to="/mkn-react-portfolio/about/">
                 <FontAwesomeIcon icon={faUser} color="#4d4d4e" />
             </NavLink>
-            <NavLink exact="true" activeClassName="active" className="contact-link" to="/mkn-react-portfolio/contact">
+            <NavLink exact="true" activeClassName="active" className="contact-link" to="/mkn-react-portfolio/contact/">
                 <FontAwesomeIcon icon={faEnvelope} color="#4d4d4e" />
             </NavLink>
         </nav>

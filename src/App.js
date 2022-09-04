@@ -11,8 +11,8 @@ function App() {
       <Routes>
         <Route path="/mkn-react-portfolio/" element={<Layout />}>
           <Route index element={<Home />} />
-          <Route path="/mkn-react-portfolio/about" element={<About />} />
-          <Route path="/mkn-react-portfolio/contact" element={<Contact />} />
+          <Route path="/mkn-react-portfolio/about/" element={<About />} />
+          <Route path="/mkn-react-portfolio/contact/" element={<Contact />} />
         </Route>
       </Routes>
     </>
