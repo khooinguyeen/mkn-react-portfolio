@@ -9,18 +9,18 @@ import { faLinkedin, faGithub, faYoutube } from '@fortawesome/free-brands-svg-ic
 
 const Sidebar = () => (
     <div className="nav-bar">
-        <Link className="logo" to="/mkn-react-portfolio">
+        <Link className="logo" to="/">
             <img src={LogoMKN} alt="logo" />
             {/* <img className="sub-logo" src={LogoSubtitle} alt="slobodan" /> */}
         </Link>
         <nav>
-            <NavLink exact="true" activeClassName="active" to="/mkn-react-portfolio/">
+            <NavLink exact="true" activeClassName="active" to="/">
                 <FontAwesomeIcon icon={faHome} color="#4d4d4e" />
             </NavLink>
-            <NavLink exact="true" activeClassName="active" className="about-link" to="/mkn-react-portfolio/about/">
+            <NavLink exact="true" activeClassName="active" className="about-link" to="/about">
                 <FontAwesomeIcon icon={faUser} color="#4d4d4e" />
             </NavLink>
-            <NavLink exact="true" activeClassName="active" className="contact-link" to="/mkn-react-portfolio/contact/">
+            <NavLink exact="true" activeClassName="active" className="contact-link" to="/contact">
                 <FontAwesomeIcon icon={faEnvelope} color="#4d4d4e" />
             </NavLink>
         </nav>
