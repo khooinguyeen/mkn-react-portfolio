@@ -27,7 +27,7 @@ const Portfolio = () => {
                         return (
                             <div className="image-box" key={idx}>
                                 <img 
-                                    src={port.cover}
+                                    src={process.env.PUBLIC_URL + port.cover}
                                     className="portfolio-image"
                                     alt="portfolio" />
                                 <div className="content">
