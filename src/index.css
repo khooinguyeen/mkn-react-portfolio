@@ -15,3 +15,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+.dashboard {
+  margin-top: 200px;
+  margin-left: 200px;
+}
