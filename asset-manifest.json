@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/mkn-react-portfolio/static/css/main.2f91e517.css",
-    "main.js": "/mkn-react-portfolio/static/js/main.5741b8f9.js",
+    "main.css": "/mkn-react-portfolio/static/css/main.810c02f5.css",
+    "main.js": "/mkn-react-portfolio/static/js/main.7938d179.js",
     "static/js/787.a2cb61a6.chunk.js": "/mkn-react-portfolio/static/js/787.a2cb61a6.chunk.js",
     "static/media/CHUOI 5.png": "/mkn-react-portfolio/static/media/CHUOI 5.ed6c3964c869628b4cb7.png",
     "static/media/helvetica-neu.ttf": "/mkn-react-portfolio/static/media/helvetica-neu.8a19678078a6b21c8057.ttf",
@@ -10,12 +10,12 @@
     "static/media/CoolveticaRg-Regular.woff": "/mkn-react-portfolio/static/media/CoolveticaRg-Regular.8307bfa187bccdc55f4d.woff",
     "static/media/CoolveticaRg-Regular.woff2": "/mkn-react-portfolio/static/media/CoolveticaRg-Regular.7d1f3b1dd46ad6557a17.woff2",
     "index.html": "/mkn-react-portfolio/index.html",
-    "main.2f91e517.css.map": "/mkn-react-portfolio/static/css/main.2f91e517.css.map",
-    "main.5741b8f9.js.map": "/mkn-react-portfolio/static/js/main.5741b8f9.js.map",
+    "main.810c02f5.css.map": "/mkn-react-portfolio/static/css/main.810c02f5.css.map",
+    "main.7938d179.js.map": "/mkn-react-portfolio/static/js/main.7938d179.js.map",
     "787.a2cb61a6.chunk.js.map": "/mkn-react-portfolio/static/js/787.a2cb61a6.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.2f91e517.css",
-    "static/js/main.5741b8f9.js"
+    "static/css/main.810c02f5.css",
+    "static/js/main.7938d179.js"
   ]
 }
