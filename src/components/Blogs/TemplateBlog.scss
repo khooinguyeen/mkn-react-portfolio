@@ -1,0 +1,43 @@
+.blog-page {
+
+    .text-zone {
+        position: absolute;
+        left: 10%;
+        top: 25%;
+        transform: translateY(-50%);
+        width: 40%;
+        max-height: 90%;
+    }
+
+    h1 {
+        color: #ED6165;
+        font-size: 56px;
+        line-height: 53px;
+        margin: 0;
+        font-family: 'Coolvetica';
+        font-weight: 400;
+
+        &:before {
+            content: '<h1>';
+            font-family: 'La Belle Aurore', cursive;
+            color: #ED6165;
+            font-size: 18px;
+            position: absolute;
+            margin-top: -30px;
+            left: -15px;
+            opacity: 0.6;
+        }
+
+        &:after {
+            content: '<h1/>';
+            font-family: 'La Belle Aurore', cursive;
+            color: #ED6165;
+            font-size: 18px;
+            position: absolute;
+            margin-top: 18px;
+            margin-left: 20px;
+            animation: fadeIn 1s 2.8s backwards;
+            opacity: 0.6;
+        }
+    }
+}

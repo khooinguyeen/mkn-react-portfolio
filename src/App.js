@@ -6,6 +6,7 @@ import About from './components/About';
 import Contact from './components/Contact';
 import Portfolio from './components/Portfolio';
 import Dashboard from './components/Dashboard';
+import TemplateBlog from './components/Blogs/TemplateBlog';
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
           <Route path="/contact" element={<Contact />} />
           <Route path="/portfolio" element={<Portfolio/>} />
           <Route path="/dashboard" element={<Dashboard/>} />
+          <Route path="/templateblog" element={<TemplateBlog/>} />
         </Route>
       </Routes>
     </>

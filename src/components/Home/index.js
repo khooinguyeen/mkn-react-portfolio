@@ -58,7 +58,7 @@ const Home = () => {
                         idx={22} 
                     />
                 </h1>
-                <h2>Frontend Developer / JavaScript Expert / Youtuber</h2>
+                <h2>a Vietnamese high school student who is passionate about programming, especially AI</h2>
                 <Link to="/contact" className='flat-button'>CONTACT ME</Link>
             </div>
             {/* <Logo /> put image here */}
