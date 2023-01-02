@@ -39,15 +39,6 @@
             animation: fadeIn 1s 1.7s backwards;
             opacity: 0.6;
         }
-
-        img {
-            width: 32px;
-            margin-left: 20px;
-            opacity: 0;
-            height: auto;
-            animation: rotateIn 1s linear both;
-            animation-delay: 1.4s;
-        }
     }
 
     h2 {
@@ -82,13 +73,58 @@
     }
 }
 
+.picture-container {
+    z-index: 0;
+    width: 500px;
+    height: 609px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: auto;
+    align-items: center;
+    animation: fadeIn 1.8s 2.8s linear both;
+    .h-shape{
+        width: 100%;
+        height: 100%;
+        background-color: #ED6165;
+        position: absolute;
+        left: auto;
+        top: auto;
+        margin-right: 0;
+        z-index: -1;
+        clip-path: polygon(50% 0, 100% 0, 100% 100%, 20% 100%);
+    }
+    img {
+        filter: sepia(0%);
+        z-index: 1;
+        border-radius: 30px;
+        position: absolute;
+        top: auto;
+        right: 60px;
+        left: auto;
+        height: 90%;
+        width: 100%;
+        object-fit: cover;
+        margin-left: 10rem;
+        margin-top: 35px; 
+    }
+}
+
 @media screen and (max-width: 1200px) {
     .tags,
     .home-page h1::before,
     .home-page h1::after {
         display: none;
     }
-
+    .picture-container {
+        img {
+            display: none;
+        }
+        .h-shape {
+            display: none;
+        }
+    }
     .home-page {
         .text-zone {
             position: initial;
@@ -104,25 +140,6 @@
             margin: 20px auto 0 auto;
             width: 125px;
         }
-
-        .logo-container {
-            position: relative;
-            width: 100px;
-            height: auto;
-            top: 50px;
-            right: 0;
-            box-sizing: border-box;
-            margin: auto;
-            left: 0;
-
-            svg {
-                position: absolute;
-                top: auto;
-                right: auto;
-                bottom: auto;
-                left: 0;
-                margin: auto;
-            }
-        }
     }
 }
+
