@@ -49,7 +49,9 @@ const Contact = () => {
                         />
                     </h1>
                     <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                        Thanks for stopping by! I'm a final-year Computer Science student actively looking 
+for AI and software engineering roles in Australia. Interested in my work with AI/ML or 
+full-stack development? Let's connect, I'd love to hear from you!
                     </p>
                     <div className='contact-form'>
                         <form ref={refForm} onSubmit={sendEmail}>
@@ -74,21 +76,18 @@ const Contact = () => {
                     </div>
                 </div>
                 <div className='info-map'>
-                    Mai Khôi Nguyên,
+                    Khoi Nguyen Mai
                     <br />
-                    Vietnam, TSQ apartment,
+                    Adelaide
                     <br />
-                    Mo Lao urban area,
-                    <br />
-                    Ha Dong, Hanoi
-                    <br />
+                    South Australia
                     <span>khoinguyenmai17102005@gmail.com</span>
                 </div>
                 <div className='map-wrap'>
-                    <MapContainer center={[20.984470, 105.787030]} zoom={13}>
+                    <MapContainer center={[-34.92714490786211, 138.61093632276874]} zoom={13}>
                         <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
-                        <Marker position={[20.984470, 105.787030]}>
-                            <Popup>Nguyen lives here, come over for a cup of coffee :)</Popup>
+                        <Marker position={[-34.92714490786211, 138.61093632276874]}>
+                            <Popup>Feel free to come over for a cup of coffee :&gt;</Popup>
                         </Marker>
                     </MapContainer>
                 </div>
