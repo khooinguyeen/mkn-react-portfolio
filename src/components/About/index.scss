@@ -9,73 +9,136 @@
     overflow: hidden;
 }
 
-.cubespinner {
-    animation-name: spincube;
-    animation-timing-function: ease-in-out;
-    animation-iteration-count: infinite;
-    animation-duration: 12s;
+.sphere-system {
+    animation: rotateSphere 20s infinite linear;
     transform-style: preserve-3d;
-    transform-origin: 100px 100px 0;
-    margin-left: calc(50% - 100px);
+    position: relative;
+    width: 400px;
+    height: 400px;
+    margin: 0 auto;
+    perspective: 1000px;
+}
 
-    div {
-        position: absolute;
-        width: 200px;
-        height: 200px;
-        border: 1px solid #ccc;
-        background: rgba(255, 255, 255, 0.4);
-        font-size: 100px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        box-shadow: 0 0 20px 0px lightyellow;
-    }
+.center-sphere {
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    background: linear-gradient(135deg, #ffd700, #ffed4e);
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    font-size: 20px;
+    color: #000;
+    box-shadow: 0 0 30px rgba(255, 215, 0, 0.8),
+                inset 0 0 20px rgba(255, 255, 255, 0.5);
+    z-index: 10;
 
-.face1 {
-    transform: translateZ(100px);
-    color: #dd0031;
-    }
-    .face2 {
-    transform: rotateY(90deg) translateZ(100px);
-    color: #f06529;
-    }
-    .face3 {
-    transform: rotateY(90deg) rotateX(90deg) translateZ(100px);
-    color: #28a4d9;
-    }
-    .face4 {
-    transform: rotateY(180deg) rotateZ(90deg) translateZ(100px);
-    color: #5ed4f4;
-    }
-    .face5 {
-    transform: rotateY(-90deg) rotateZ(90deg) translateZ(100px);
-    color: #efd81d;
-    }
-    .face6 {
-    transform: rotateX(-90deg) translateZ(100px);
-    color: #ec4d28;
+    span {
+        text-transform: uppercase;
+        letter-spacing: 2px;
     }
 }
 
-@keyframes spincube {
-    from,
+.skill-card {
+    position: absolute;
+    width: 100px;
+    height: 60px;
+    background: rgba(255, 255, 255, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 11px;
+    font-weight: 600;
+    color: #fff;
+    text-align: center;
+    padding: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(5px);
+    top: 50%;
+    left: 50%;
+    transform-origin: center;
+
+    span {
+        z-index: 2;
+        position: relative;
+    }
+
+    .connector {
+        position: absolute;
+        width: 2px;
+        height: 150px;
+        background: linear-gradient(to bottom,
+            rgba(255, 215, 0, 0.6),
+            rgba(255, 255, 255, 0.1));
+        transform-origin: bottom center;
+        bottom: 30px;
+        left: 50%;
+        margin-left: -1px;
+        z-index: -1;
+    }
+}
+
+.skill-1 {
+    transform: translate(-50%, -50%) rotateY(0deg) translateZ(200px);
+}
+
+.skill-2 {
+    transform: translate(-50%, -50%) rotateY(30deg) translateZ(200px);
+}
+
+.skill-3 {
+    transform: translate(-50%, -50%) rotateY(60deg) translateZ(200px);
+}
+
+.skill-4 {
+    transform: translate(-50%, -50%) rotateY(90deg) translateZ(200px);
+}
+
+.skill-5 {
+    transform: translate(-50%, -50%) rotateY(120deg) translateZ(200px);
+}
+
+.skill-6 {
+    transform: translate(-50%, -50%) rotateY(150deg) translateZ(200px);
+}
+
+.skill-7 {
+    transform: translate(-50%, -50%) rotateY(180deg) translateZ(200px);
+}
+
+.skill-8 {
+    transform: translate(-50%, -50%) rotateY(210deg) translateZ(200px);
+}
+
+.skill-9 {
+    transform: translate(-50%, -50%) rotateY(240deg) translateZ(200px);
+}
+
+.skill-10 {
+    transform: translate(-50%, -50%) rotateY(270deg) translateZ(200px);
+}
+
+.skill-11 {
+    transform: translate(-50%, -50%) rotateY(300deg) translateZ(200px);
+}
+
+.skill-12 {
+    transform: translate(-50%, -50%) rotateY(330deg) translateZ(200px);
+}
+
+@keyframes rotateSphere {
+    from {
+        transform: rotateY(0deg) rotateX(15deg);
+    }
     to {
-    transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-    }
-    16% {
-    transform: rotateY(-90deg) rotateZ(90deg);
-    }
-    33% {
-    transform: rotateY(-90deg) rotateX(90deg);
-    }
-    50% {
-    transform: rotateY(-180deg) rotateZ(90deg);
-    }
-    66% {
-    transform: rotateY(-270deg) rotateX(90deg);
-    }
-    83% {
-    transform: rotateX(90deg);
+        transform: rotateY(360deg) rotateX(15deg);
     }
 }
 
