@@ -170,28 +170,18 @@ const SkillsSphere = () => {
       position: 'absolute',
       left: '50%',
       top: '50%',
-      width: '100px',
-      height: '100px',
-      marginLeft: '-50px',
-      marginTop: '-50px',
+      width: '50px',
+      height: '50px',
+      marginLeft: '-25px',
+      marginTop: '-25px',
       borderRadius: '50%',
-      background: 'radial-gradient(circle at 30% 30%, #818cf8, #4f46e5, #3730a3)',
+      background: 'radial-gradient(circle at 30% 30%, #ff999c, #ED6165, #d14548)',
       boxShadow: `
-        0 0 60px rgba(99, 102, 241, 0.6),
-        0 0 100px rgba(99, 102, 241, 0.4),
+        0 0 60px rgba(237, 97, 101, 0.6),
+        0 0 100px rgba(237, 97, 101, 0.4),
         inset 0 0 30px rgba(255, 255, 255, 0.1)
       `,
-      display: 'flex',
-      justifyContent: 'center',
-      alignItems: 'center',
       zIndex: 1000,
-    },
-    meText: {
-      color: '#ffffff',
-      fontSize: '24px',
-      fontWeight: '700',
-      textShadow: '0 2px 10px rgba(0, 0, 0, 0.3)',
-      fontFamily: 'inherit',
     },
     skillCard: (pos, skill, isHovered) => ({
       position: 'absolute',
@@ -209,14 +199,15 @@ const SkillsSphere = () => {
         : '0 4px 20px rgba(0, 0, 0, 0.3)',
       color: '#ffffff',
       fontSize: isHovered ? '15px' : '13px',
-      fontWeight: '600',
+      fontWeight: '400',
       whiteSpace: 'nowrap',
       cursor: 'pointer',
       transition: 'all 0.3s ease',
       zIndex: Math.round(pos.z) + 500,
       opacity: pos.z < -100 ? 0.3 : 1,
       backdropFilter: 'blur(10px)',
-      fontFamily: 'inherit',
+      fontFamily: 'sans-serif',
+      letterSpacing: '1px',
     }),
     connection: (pos) => {
       const length = Math.sqrt(pos.x ** 2 + pos.y ** 2);
@@ -235,24 +226,6 @@ const SkillsSphere = () => {
         opacity: pos.z < -100 ? 0.1 : 0.4,
       };
     },
-    particles: {
-      position: 'absolute',
-      width: '100%',
-      height: '100%',
-      overflow: 'hidden',
-      pointerEvents: 'none',
-    },
-    particle: (i) => ({
-      position: 'absolute',
-      width: '3px',
-      height: '3px',
-      background: '#6366f1',
-      borderRadius: '50%',
-      left: `${Math.random() * 100}%`,
-      top: `${Math.random() * 100}%`,
-      opacity: Math.random() * 0.5 + 0.1,
-      animation: `float ${5 + Math.random() * 10}s linear infinite`,
-    }),
   };
 
   return (
@@ -266,23 +239,6 @@ const SkillsSphere = () => {
       onTouchMove={handleTouchMove}
       onTouchEnd={handleMouseUp}
     >
-      {/* CSS Keyframes */}
-      <style>{`
-        @keyframes float {
-          0%, 100% { transform: translateY(0px) translateX(0px); }
-          25% { transform: translateY(-20px) translateX(10px); }
-          50% { transform: translateY(-10px) translateX(-10px); }
-          75% { transform: translateY(-30px) translateX(5px); }
-        }
-      `}</style>
-
-      {/* Background particles */}
-      <div style={styles.particles}>
-        {Array.from({ length: 50 }).map((_, index) => (
-          <div key={index} style={styles.particle(index)} />
-        ))}
-      </div>
-
       {/* 3D Scene */}
       <div style={styles.scene}>
         <div style={styles.sphere}>
@@ -315,9 +271,7 @@ const SkillsSphere = () => {
           })}
 
           {/* Center sphere */}
-          <div style={styles.centerSphere}>
-            <span style={styles.meText}>Me</span>
-          </div>
+          <div style={styles.centerSphere}></div>
         </div>
       </div>
     </div>
