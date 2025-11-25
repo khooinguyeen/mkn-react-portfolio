@@ -188,26 +188,24 @@ const SkillsSphere = () => {
       left: '50%',
       top: '50%',
       transform: `translate(-50%, -50%) translate3d(${pos.x}px, ${pos.y}px, ${pos.z}px)`,
-      padding: '10px 16px',
-      borderRadius: '12px',
-      background: isHovered
-        ? `linear-gradient(135deg, ${skill.color}dd, ${skill.color}99)`
-        : 'rgba(31, 41, 55, 0.9)',
-      border: `2px solid ${isHovered ? skill.color : 'rgba(75, 85, 99, 0.5)'}`,
+      padding: '8px 14px',
+      borderRadius: '0',
+      background: isHovered ? skill.color : 'transparent',
+      border: `1px solid ${skill.color}`,
       boxShadow: isHovered
-        ? `0 0 30px ${skill.color}66, 0 10px 40px rgba(0, 0, 0, 0.3)`
-        : '0 4px 20px rgba(0, 0, 0, 0.3)',
-      color: '#ffffff',
-      fontSize: isHovered ? '15px' : '13px',
+        ? `0 0 20px ${skill.color}66`
+        : 'none',
+      color: isHovered ? '#333' : skill.color,
+      fontSize: '11px',
       fontWeight: '400',
       whiteSpace: 'nowrap',
       cursor: 'pointer',
       transition: 'all 0.3s ease',
       zIndex: Math.round(pos.z) + 500,
       opacity: pos.z < -100 ? 0.3 : 1,
-      backdropFilter: 'blur(10px)',
       fontFamily: 'sans-serif',
-      letterSpacing: '1px',
+      letterSpacing: '2px',
+      textTransform: 'uppercase',
     }),
     connection: (pos) => {
       const length = Math.sqrt(pos.x ** 2 + pos.y ** 2);
