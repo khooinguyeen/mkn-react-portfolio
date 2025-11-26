@@ -67,8 +67,12 @@ const Home = () => {
 
         </div>
         <div className='picture-container'>
-            <div className='h-shape'></div>
-            <img src={myPicture} alt='me'></img>
+            <div className='image-wrapper'>
+                <img src={myPicture} alt='me'></img>
+                <div className='dot dot-1'></div>
+                <div className='dot dot-2'></div>
+                <div className='dot dot-3'></div>
+            </div>
         </div>
         <Loader type='ball-clip-rotate-multiple' />
         {/* <Loader type='cube-transition' /> */}

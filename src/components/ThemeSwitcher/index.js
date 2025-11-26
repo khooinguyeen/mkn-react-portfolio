@@ -13,17 +13,6 @@ const ThemeSwitcher = () => {
     setIsOpen(false);
   };
 
-  const getThemeIcon = (themeName) => {
-    const icons = {
-      space: '🌌',
-      nebula: '🌸',
-      solar: '☀️',
-      aurora: '🌊',
-      cyberpunk: '⚡',
-    };
-    return icons[themeName] || '🎨';
-  };
-
   return (
     <div className="theme-switcher">
       <button
@@ -68,7 +57,6 @@ const ThemeSwitcher = () => {
                       />
                     </div>
                     <div className="theme-info">
-                      <span className="theme-icon">{getThemeIcon(themeName)}</span>
                       <span className="theme-name">{theme.name}</span>
                     </div>
                     {isActive && <div className="active-indicator">✓</div>}
