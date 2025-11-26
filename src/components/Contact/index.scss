@@ -35,61 +35,111 @@
     input[type='text'],
     input[type='email'] {
         width: 100%;
-        border: 0;
-        background: #115173;
+        border: 1px solid var(--cardBorder);
+        background: var(--cardBg);
         height: 50px;
         font-size: 16px;
-        color: #fff;
+        color: var(--textPrimary);
         padding: 0 20px;
         box-sizing: border-box;
+        border-radius: 4px;
+        transition: all 0.3s ease;
+
+        &:focus {
+            outline: none;
+            border-color: var(--primary);
+            box-shadow: 0 0 10px var(--primary);
+            background: rgba(255, 255, 255, 0.08);
+        }
+
+        &::placeholder {
+            color: var(--textSecondary);
+        }
     }
 
     textarea {
         width: 100%;
-        border: 0;
-        background: #115173;
+        border: 1px solid var(--cardBorder);
+        background: var(--cardBg);
         height: 50px;
         font-size: 16px;
-        color: #fff;
+        color: var(--textPrimary);
         padding: 20px;
         min-height: 130px;
         box-sizing: border-box;
+        border-radius: 4px;
+        transition: all 0.3s ease;
+        resize: vertical;
+
+        &:focus {
+            outline: none;
+            border-color: var(--primary);
+            box-shadow: 0 0 10px var(--primary);
+            background: rgba(255, 255, 255, 0.08);
+        }
+
+        &::placeholder {
+            color: var(--textSecondary);
+        }
     }
 
     .flat-button {
         color: var(--primary);
-        background: 0 0;
-        font: 11px;
+        background: transparent;
+        font-size: 11px;
         letter-spacing: 3px;
         text-decoration: none;
-        padding: 8px 10px;
-        border: 1px solid var(--primary);
+        padding: 10px 20px;
+        border: 2px solid var(--primary);
         float: right;
         border-radius: 4px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        text-transform: uppercase;
+        font-weight: 600;
+
+        &:hover {
+            background: var(--primary);
+            color: #000;
+            box-shadow: 0 0 20px var(--primary);
+            transform: translateY(-2px);
+        }
+
+        &:active {
+            transform: translateY(0);
+        }
     }
 }
 
 .info-map {
     position: absolute;
-    background-color: #000;
+    background: linear-gradient(135deg, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.95));
+    backdrop-filter: blur(10px);
+    border: 2px solid var(--primary);
+    border-radius: 10px;
     top: 80px;
     right: 28%;
     z-index: 999999;
     width: 267px;
     padding: 20px;
-    color: #fff;
+    color: var(--textPrimary);
     font-family: 'Helvetica';
     font-size: 17px;
     font-weight: 300;
     opacity: 0;
     animation: fadeIn 1s 1.5s;
     animation-fill-mode: forwards;
+    box-shadow:
+        0 0 30px var(--primary),
+        0 8px 32px rgba(0, 0, 0, 0.6),
+        inset 0 0 20px rgba(0, 0, 0, 0.3);
 
     span {
         font-size: 16px;
         display: block;
         padding-top: 20px;
         color: var(--primary);
+        font-weight: 500;
     }
 }
 

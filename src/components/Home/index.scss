@@ -84,7 +84,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    animation: fadeIn 1.8s 2.8s linear both, float 6s ease-in-out infinite;
+    animation: fadeIn 1.8s 2.8s linear both, float 10s ease-in-out infinite;
 
     // Glowing orb background
     &::before {
@@ -93,13 +93,13 @@
         width: 120%;
         height: 120%;
         background: radial-gradient(circle, var(--primary) 0%, transparent 70%);
-        opacity: 0.3;
+        opacity: 0.35;
         filter: blur(40px);
         z-index: -1;
         animation: pulse-glow 4s ease-in-out infinite;
     }
 
-    // Rotating ring
+    // Rotating and pulsing ring
     &::after {
         content: '';
         position: absolute;
@@ -107,9 +107,13 @@
         height: 110%;
         border: 2px solid var(--primary);
         border-radius: 50%;
-        opacity: 0.3;
-        animation: rotate-ring 20s linear infinite;
+        opacity: 0.7;
+        animation: rotate-pulse-ring 15s ease-in-out infinite;
         z-index: -1;
+        box-shadow:
+            0 0 30px var(--primary),
+            0 0 60px rgba(var(--primary), 0.3),
+            inset 0 0 20px rgba(var(--primary), 0.1);
     }
 
     .image-wrapper {
@@ -150,28 +154,29 @@
         // Decorative dots
         .dot {
             position: absolute;
-            width: 8px;
-            height: 8px;
+            width: 12px;
+            height: 12px;
             background: var(--primary);
             border-radius: 50%;
-            box-shadow: 0 0 10px var(--primary);
+            box-shadow: 0 0 15px var(--primary), 0 0 30px var(--accentLight);
+            z-index: 10;
 
             &.dot-1 {
                 top: 10%;
                 right: 5%;
-                animation: float-dot 3s ease-in-out infinite;
+                animation: float-dot 2.5s ease-in-out infinite;
             }
 
             &.dot-2 {
                 bottom: 15%;
                 left: 8%;
-                animation: float-dot 4s ease-in-out infinite 1s;
+                animation: float-dot 3s ease-in-out infinite 1s;
             }
 
             &.dot-3 {
                 top: 60%;
                 right: -5%;
-                animation: float-dot 3.5s ease-in-out infinite 0.5s;
+                animation: float-dot 2.8s ease-in-out infinite 0.5s;
             }
         }
     }
@@ -179,40 +184,60 @@
 
 @keyframes float {
     0%, 100% {
-        transform: translateY(-50%) translateX(0);
+        transform: translateY(-50%) translateX(0) translateY(0);
+    }
+    25% {
+        transform: translateY(-50%) translateX(-15px) translateY(-15px);
     }
     50% {
-        transform: translateY(-50%) translateX(-10px) translateY(-10px);
+        transform: translateY(-50%) translateX(0) translateY(-25px);
+    }
+    75% {
+        transform: translateY(-50%) translateX(15px) translateY(-15px);
     }
 }
 
 @keyframes pulse-glow {
     0%, 100% {
-        opacity: 0.2;
+        opacity: 0.3;
         transform: scale(1);
     }
     50% {
-        opacity: 0.4;
-        transform: scale(1.1);
+        opacity: 0.6;
+        transform: scale(1.15);
     }
 }
 
-@keyframes rotate-ring {
-    from {
-        transform: rotate(0deg);
+@keyframes rotate-pulse-ring {
+    0% {
+        transform: rotate(0deg) scale(1);
+        opacity: 0.7;
     }
-    to {
-        transform: rotate(360deg);
+    25% {
+        transform: rotate(90deg) scale(1.05);
+        opacity: 0.85;
+    }
+    50% {
+        transform: rotate(180deg) scale(1);
+        opacity: 0.7;
+    }
+    75% {
+        transform: rotate(270deg) scale(1.05);
+        opacity: 0.85;
+    }
+    100% {
+        transform: rotate(360deg) scale(1);
+        opacity: 0.7;
     }
 }
 
 @keyframes float-dot {
     0%, 100% {
         transform: translateY(0) scale(1);
-        opacity: 0.6;
+        opacity: 0.5;
     }
     50% {
-        transform: translateY(-15px) scale(1.2);
+        transform: translateY(-25px) scale(1.5);
         opacity: 1;
     }
 }

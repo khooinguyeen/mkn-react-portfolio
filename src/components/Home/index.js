@@ -9,28 +9,31 @@ import Loader from 'react-loaders'
 const Home = () => {
     
     const [letterClass, setLetterClass] = useState('text-animate')
-    const nameArray = [' ','N','g','u','y','e','n']
+    const nameArray = [' ','N','g','u','y','e','n',' ','(','J','u','l','i','a','n',')']
     const jobArray = [
-        'w',
-        'e',
-        'b',
-        ' ',
-        'd',
-        'e',
-        'v',
-        'e',
-        'l',
+        's',
         'o',
-        'p',
-        'e',
+        'f',
+        't',
+        'w',
+        'a',
         'r',
-        '.',
+        'e',
+        ' ',
+        'e',
+        'n',
+        'g',
+        'i',
+        'n',
+        'e',
+        'e',
+        'r'
     ]
 
     useEffect(() => {
         const timer = setTimeout(() => {
           setLetterClass('text-animate-hover');
-        }, 3000);
+        }, 4000);
         return () => clearTimeout(timer);
       }, []);
 
@@ -40,17 +43,17 @@ const Home = () => {
             <div className="text-zone">
                 <h1>
                     <span className={letterClass}>H</span>
-                    <span className={`${letterClass} _12`}>i</span>
-                    <span className={`${letterClass} _13`}>,</span>       
+                    <span className={`${letterClass} _1`}>i</span>
+                    <span className={`${letterClass} _2`}>,</span>       
                     <br />
-                    <span className={`${letterClass} _14`}>I</span>    
-                    <span className={`${letterClass} _15`}>'</span>  
-                    <span className={`${letterClass} _16`}>m</span>    
+                    <span className={`${letterClass} _3`}>I</span>    
+                    <span className={`${letterClass} _4`}>'</span>  
+                    <span className={`${letterClass} _5`}>m</span>    
                     {/* <img src={LogoTitle} alt="developer" /> */}
                     <AnimatedLetters 
                         letterClass={letterClass}
                         strArray={nameArray}
-                        idx={17}
+                        idx={6}
                     />
                     <br />
                     <AnimatedLetters 
