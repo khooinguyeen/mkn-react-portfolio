@@ -1,6 +1,7 @@
 import { Outlet } from 'react-router-dom';
 import Sidebar from '../Sidebar';
 import StarBackground from '../StarBackground';
+import ThemeSwitcher from '../ThemeSwitcher';
 import './index.scss';
 
 const Layout = () => {
@@ -8,6 +9,7 @@ const Layout = () => {
         <div className="App">
             <StarBackground />
             <Sidebar />
+            <ThemeSwitcher />
             <div className='page'>
                 <span className='tags top-tags'>&lt;body&gt;</span>
 

@@ -1,5 +1,26 @@
 $primary-color: #ED6165;
 
+// CSS Variables for theming - defaults (Space theme)
+:root {
+  --primary: #ED6165;
+  --secondary: #FFF;
+  --background: #000000;
+  --starColor: #FFF;
+  --starGlow: rgba(255, 255, 255, 0.8);
+  --accentLight: #ff999c;
+  --accentDark: #d14548;
+  --textPrimary: #fff;
+  --textSecondary: #8d8d8d;
+  --cardBg: rgba(255, 255, 255, 0.05);
+  --cardBorder: rgba(255, 255, 255, 0.1);
+  --gradient: linear-gradient(135deg, #000000 0%, #1a0a0a 100%);
+}
+
+// Smooth transitions for theme changes
+* {
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
 @import 'animate.css';
 // @import '~loaders.css/src/animations/pacman.scss';
 @import '~loaders.css/src/animations/ball-clip-rotate-multiple.scss';
@@ -47,4 +68,15 @@ textarea {
   height: 50px;
   animation: fadeOut 1s 1s;
   animation-fill-mode: forwards;
+}
+
+// Override loader colors to use theme variables
+.ball-clip-rotate-multiple > div {
+  border-color: var(--primary) !important;
+  border-bottom-color: transparent !important;
+  border-top-color: transparent !important;
+
+  &:last-child {
+    border-color: var(--primary) transparent var(--primary) transparent !important;
+  }
 }

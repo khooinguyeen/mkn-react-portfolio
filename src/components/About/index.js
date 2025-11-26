@@ -175,10 +175,10 @@ const SkillsSphere = () => {
       marginLeft: '-25px',
       marginTop: '-25px',
       borderRadius: '50%',
-      background: 'radial-gradient(circle at 30% 30%, #ff999c, #ED6165, #d14548)',
+      background: 'radial-gradient(circle at 30% 30%, var(--accentLight), var(--primary), var(--accentDark))',
       boxShadow: `
-        0 0 60px rgba(237, 97, 101, 0.6),
-        0 0 100px rgba(237, 97, 101, 0.4),
+        0 0 60px var(--primary),
+        0 0 100px var(--primary),
         inset 0 0 30px rgba(255, 255, 255, 0.1)
       `,
       zIndex: 1000,
@@ -211,13 +211,25 @@ const SkillsSphere = () => {
       const length = Math.sqrt(pos.x ** 2 + pos.y ** 2);
       const angle = Math.atan2(pos.y, pos.x) * (180 / Math.PI);
 
+      // Get the CSS variable value for primary color
+      const primaryColor = getComputedStyle(document.documentElement)
+        .getPropertyValue('--primary').trim();
+
+      // Convert hex to rgba
+      const hexToRgba = (hex, alpha) => {
+        const r = parseInt(hex.slice(1, 3), 16);
+        const g = parseInt(hex.slice(3, 5), 16);
+        const b = parseInt(hex.slice(5, 7), 16);
+        return `rgba(${r}, ${g}, ${b}, ${alpha})`;
+      };
+
       return {
         position: 'absolute',
         left: '50%',
         top: '50%',
         width: `${length}px`,
         height: '1px',
-        background: `linear-gradient(90deg, rgba(99, 102, 241, 0.6), rgba(99, 102, 241, 0.1))`,
+        background: `linear-gradient(90deg, ${hexToRgba(primaryColor, 0.6)}, ${hexToRgba(primaryColor, 0.1)})`,
         transformOrigin: '0 50%',
         transform: `rotate(${angle}deg)`,
         zIndex: 1,

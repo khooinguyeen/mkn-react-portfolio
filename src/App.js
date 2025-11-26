@@ -7,10 +7,11 @@ import Contact from './components/Contact';
 import Portfolio from './components/Portfolio';
 import Dashboard from './components/Dashboard';
 import TemplateBlog from './components/Blogs/TemplateBlog';
+import { ThemeProvider } from './contexts/ThemeContext';
 
 function App() {
   return (
-    <>
+    <ThemeProvider>
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<Home />} />
@@ -21,7 +22,7 @@ function App() {
           <Route path="/templateblog" element={<TemplateBlog/>} />
         </Route>
       </Routes>
-    </>
+    </ThemeProvider>
   );
 }
 

@@ -10,7 +10,7 @@
 }
 
 .tags {
-    color: #ED6165;
+    color: var(--primary);
     opacity: 0.6;
     position: absolute;
     bottom: 0;
@@ -44,7 +44,7 @@
         h1 {
             font-size: 53px;
             font-family: 'Coolvetica';
-            color:#ED6165;
+            color: var(--primary);
             font-weight: 400;
             margin-top: 0;
             position: relative;
@@ -60,6 +60,7 @@
                 left: -10px;
                 opacity: 0.6;
                 line-height: 18px;
+                color: var(--primary);
             }
 
             &::after {
@@ -72,12 +73,13 @@
                 left: -30px;
                 bottom: -20px;
                 margin-left: 20px;
+                color: var(--primary);
             }
         }
 
         p {
             font-size: 13px;
-            color: #ffff;
+            color: var(--textPrimary);
             font-family: sans-serif;
             font-weight: 300;
             min-width: fit-content;
@@ -106,7 +108,7 @@
 
     .text-animate-hover {
         &:hover {
-            color: #ff999c;
+            color: var(--accentLight);
         }
     }
 }

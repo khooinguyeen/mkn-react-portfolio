@@ -57,13 +57,13 @@
     }
 
     .flat-button {
-        color: #ED6165;
+        color: var(--primary);
         background: 0 0;
         font: 11px;
         letter-spacing: 3px;
         text-decoration: none;
         padding: 8px 10px;
-        border: 1px solid #ED6165;
+        border: 1px solid var(--primary);
         float: right;
         border-radius: 4px;
     }
@@ -89,7 +89,7 @@
         font-size: 16px;
         display: block;
         padding-top: 20px;
-        color: #ED6165;
+        color: var(--primary);
     }
 }
 

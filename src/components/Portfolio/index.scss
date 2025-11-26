@@ -70,7 +70,7 @@
             padding: 0 23px;
             height: 40px;
             line-height: 34px;
-            border: 2px solid #ED6165;
+            border: 2px solid var(--primary);
             border-radius: 4px;
             font-size: 14px;
             color: #fff;
@@ -83,12 +83,12 @@
 
         .btn:hover {
             transform: translateY(-3px);
-            background: #ED6165;
+            background: var(--primary);
         }
 
         &:after {
             content: "";
-            background: linear-gradient(180deg, #ED6165, #000);
+            background: linear-gradient(180deg, var(--primary), #000);
             position: absolute;
             left: 0;
             right: 0;

@@ -46,12 +46,12 @@
         }
   
         &:hover {
-          color: #ED6165;
-  
+          color: var(--primary);
+
           svg {
             opacity: 0;
           }
-  
+
           &:after {
             opacity: 1;
           }
@@ -98,7 +98,7 @@
   
       a.active {
         svg {
-          color: #ED6165;
+          color: var(--primary);
         }
       }
     }
@@ -124,7 +124,7 @@
   
         &:hover {
           .anchor-icon {
-            color: #ED6165;
+            color: var(--primary);
           }
         }
       }

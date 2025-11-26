@@ -9,23 +9,26 @@ const StarBackground = () => {
       overflow: 'hidden',
       pointerEvents: 'none',
       zIndex: -1,
+      background: 'var(--gradient)',
     },
     star: () => {
       const moveX = (Math.random() - 0.5) * 100;
       const moveY = (Math.random() - 0.5) * 100;
       const duration = 10 + Math.random() * 20;
+      const size = Math.random() * 3;
 
       return {
         position: 'absolute',
-        width: `${Math.random() * 3}px`,
-        height: `${Math.random() * 3}px`,
-        background: '#FFF',
+        width: `${size}px`,
+        height: `${size}px`,
+        background: 'var(--starColor)',
         borderRadius: '50%',
         left: `${Math.random() * 100}%`,
         top: `${Math.random() * 100}%`,
         opacity: Math.random() * 0.8 + 0.2,
         animation: `float-${Math.floor(Math.random() * 10)} ${duration}s ease-in-out infinite`,
         animationDelay: `${Math.random() * 5}s`,
+        boxShadow: `0 0 ${size * 2}px var(--starGlow)`,
         '--move-x': `${moveX}px`,
         '--move-y': `${moveY}px`,
       };

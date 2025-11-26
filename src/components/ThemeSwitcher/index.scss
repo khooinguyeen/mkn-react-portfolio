@@ -1,0 +1,206 @@
+.theme-switcher {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 10000;
+
+  .theme-toggle-btn {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: var(--primary, #ED6165);
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+
+    &:hover {
+      transform: scale(1.1) rotate(15deg);
+      box-shadow: 0 6px 20px var(--primary, #ED6165);
+    }
+
+    svg {
+      transition: transform 0.3s ease;
+    }
+  }
+
+  .theme-backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(4px);
+    z-index: 9998;
+    animation: fadeIn 0.2s ease;
+  }
+
+  .theme-menu {
+    position: absolute;
+    top: 60px;
+    right: 0;
+    background: rgba(20, 20, 30, 0.95);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    padding: 20px;
+    min-width: 280px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+    animation: slideDown 0.3s ease;
+    z-index: 9999;
+
+    .theme-menu-header {
+      margin-bottom: 15px;
+      padding-bottom: 15px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+
+      h3 {
+        margin: 0;
+        color: var(--textPrimary, #fff);
+        font-size: 16px;
+        font-weight: 500;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+      }
+    }
+
+    .theme-options {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .theme-option {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 12px;
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 8px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      position: relative;
+      overflow: hidden;
+
+      &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: linear-gradient(
+          135deg,
+          var(--theme-primary, #ED6165) 0%,
+          var(--theme-secondary, #fff) 100%
+        );
+        opacity: 0;
+        transition: opacity 0.3s ease;
+        z-index: -1;
+      }
+
+      &:hover {
+        transform: translateX(5px);
+        border-color: var(--theme-primary, rgba(255, 255, 255, 0.3));
+        background: rgba(255, 255, 255, 0.05);
+
+        &::before {
+          opacity: 0.1;
+        }
+      }
+
+      &.active {
+        border-color: var(--theme-primary, #ED6165);
+        background: rgba(255, 255, 255, 0.08);
+
+        .theme-name {
+          color: var(--theme-primary, #ED6165);
+          font-weight: 600;
+        }
+      }
+
+      .theme-preview {
+        display: flex;
+        gap: 4px;
+
+        .theme-color-circle {
+          width: 16px;
+          height: 16px;
+          border-radius: 50%;
+          border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+      }
+
+      .theme-info {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        flex: 1;
+
+        .theme-icon {
+          font-size: 18px;
+        }
+
+        .theme-name {
+          color: #fff;
+          font-size: 14px;
+          font-weight: 400;
+          letter-spacing: 0.5px;
+          transition: all 0.3s ease;
+        }
+      }
+
+      .active-indicator {
+        color: var(--theme-primary, #ED6165);
+        font-size: 18px;
+        font-weight: bold;
+      }
+    }
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+// Responsive design
+@media screen and (max-width: 768px) {
+  .theme-switcher {
+    top: 15px;
+    right: 15px;
+
+    .theme-toggle-btn {
+      width: 45px;
+      height: 45px;
+      font-size: 18px;
+    }
+
+    .theme-menu {
+      right: -10px;
+      min-width: 260px;
+    }
+  }
+}
