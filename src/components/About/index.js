@@ -316,7 +316,7 @@ const About = () => {
 
                 <SkillsSphere />
             </div>
-            <Loader type='pacman' />
+            <Loader type='ball-clip-rotate-multiple' />
         </>
     )
 }

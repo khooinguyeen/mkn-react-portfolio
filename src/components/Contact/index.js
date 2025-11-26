@@ -92,7 +92,7 @@ full-stack development? Let's connect, I'd love to hear from you!
                     </MapContainer>
                 </div>
             </div>
-            <Loader type='pacman' />
+            <Loader type='ball-clip-rotate-multiple' />
         </>
     )
 }

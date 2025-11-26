@@ -1,7 +1,11 @@
 $primary-color: #ED6165;
 
 @import 'animate.css';
-@import '~loaders.css/src/animations/pacman.scss';
+// @import '~loaders.css/src/animations/pacman.scss';
+@import '~loaders.css/src/animations/ball-clip-rotate-multiple.scss';
+// @import '~loaders.css/src/animations/cube-transition.scss';
+// @import '~loaders.css/src/animations/line-scale-pulse-out.scss';
+
 
 @font-face {
   font-family: 'Helvetica Neue';

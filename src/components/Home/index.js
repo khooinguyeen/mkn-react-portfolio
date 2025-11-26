@@ -59,7 +59,7 @@ const Home = () => {
                         idx={22} 
                     />
                 </h1>
-                <h2>a Vietnamese high school student who is passionate about programming, especially AI</h2>
+                <h2>a Computer Science student who is passionate about programming, especially using it to solve problem in life</h2>
                 <Link to="/contact" className='flat-button'>CONTACT ME</Link>
             </div>
             {/* <Logo /> put image here */}
@@ -70,7 +70,9 @@ const Home = () => {
             <div className='h-shape'></div>
             <img src={myPicture} alt='me'></img>
         </div>
-        <Loader type='pacman' />
+        <Loader type='ball-clip-rotate-multiple' />
+        {/* <Loader type='cube-transition' /> */}
+        {/* <Loader type='line-scale-pulse-out' /> */}
         </>
     )
 }

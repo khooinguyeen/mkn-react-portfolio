@@ -27,7 +27,7 @@ const TemplateBlog = () => {
                     <p>Fusce lacus turpis, viverra vitae tristique non, sagittis nec massa.</p>
                 </div>
             </div>
-            <Loader type='pacman' />
+            <Loader type='ball-clip-rotate-multiple' />
         </>
     )
 } 
