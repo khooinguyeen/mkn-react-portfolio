@@ -19,11 +19,11 @@ const Portfolio = () => {
     const portfolio = [
         {
             name: "Maptek Block Model Compression",
-            shortName: "Maptek WeEight",
-            description: "Advanced compression algorithm for mining block model data, optimizing storage and processing efficiency for large-scale geological datasets.",
+            shortName: "Maptek Compressor",
+            description: "Advanced compression algorithm for mining block model data, optimising storage and processing efficiency for large-scale geological datasets.",
             url: "https://github.com/Tuanminhngo/Maptek-SEP-WeEight.git",
             github: "https://github.com/Tuanminhngo/Maptek-SEP-WeEight.git",
-            technologies: ["Python", "Data Compression", "Mining Engineering", "Algorithm Design"],
+            technologies: ["C++", "Algorithm Design"],
             image: "https://opengraph.githubassets.com/1/Tuanminhngo/Maptek-SEP-WeEight",
             features: [
                 "Efficient block model compression algorithm",
@@ -34,41 +34,39 @@ const Portfolio = () => {
         },
         {
             name: "GreenAction Volunteer Website",
-            shortName: "GreenAction",
+            shortName: "Green Action",
             description: "Community-driven platform connecting volunteers with environmental initiatives and sustainability projects.",
             url: "https://github.com/khooinguyeen/GreenAction.git",
             github: "https://github.com/khooinguyeen/GreenAction.git",
-            technologies: ["React", "JavaScript", "Web Development", "Community Platform"],
+            technologies: ["Vue.js", "JavaScript", "Web Development"],
             image: "https://opengraph.githubassets.com/1/khooinguyeen/GreenAction",
             features: [
                 "Volunteer registration and management",
                 "Event creation and tracking",
                 "Community engagement features",
-                "Environmental impact tracking"
             ]
         },
         {
             name: "Food Management System",
             shortName: "FoodMS",
-            description: "Comprehensive system for managing food inventory, orders, and supply chain logistics with real-time tracking capabilities.",
+            description: "A Qt-based application for meal planning, ingredient tracking, and automated shopping lists",
             url: "https://github.com/khooinguyeen/FoodManagementSystem.git",
             github: "https://github.com/khooinguyeen/FoodManagementSystem.git",
-            technologies: ["Java", "Database Management", "Backend Development", "System Design"],
+            technologies: ["C++", "Database Management", "Backend Development", "System Design", "OOP"],
             image: "https://opengraph.githubassets.com/1/khooinguyeen/FoodManagementSystem",
             features: [
-                "Real-time inventory tracking",
-                "Order management system",
-                "Supply chain optimization",
-                "Analytics and reporting dashboard"
+                "Meal plan calendar",
+                "Ingredient tracking",
+                "Automated shopping list",
             ]
         },
         {
             name: "Look & Tell Sign Language Translation",
-            shortName: "Look & Tell ML",
+            shortName: "Look & Tell model",
             description: "Deep learning model for translating Vietnamese sign language to text in real-time, enhancing accessibility for the deaf community.",
             url: "https://github.com/khooinguyeen/Vietnamese-Sign-Language-Translation.git",
             github: "https://github.com/khooinguyeen/Vietnamese-Sign-Language-Translation.git",
-            technologies: ["Python", "TensorFlow", "Computer Vision", "Deep Learning", "NLP"],
+            technologies: ["Python", "TensorFlow", "Computer Vision", "Deep Learning"],
             image: "https://opengraph.githubassets.com/1/khooinguyeen/Vietnamese-Sign-Language-Translation",
             features: [
                 "Real-time sign language recognition",
@@ -83,7 +81,7 @@ const Portfolio = () => {
             description: "Mobile application bringing sign language translation to Android devices, making communication accessible on-the-go.",
             url: "https://github.com/khooinguyeen/LookandTell-OfficialApp.git",
             github: "https://github.com/khooinguyeen/LookandTell-OfficialApp.git",
-            technologies: ["Android", "Java", "Mobile Development", "TensorFlow Lite", "ML Kit"],
+            technologies: ["Android", "Java", "Mobile Development", "TensorFlow"],
             image: "https://opengraph.githubassets.com/1/khooinguyeen/LookandTell-OfficialApp",
             features: [
                 "Cross-platform mobile application",
@@ -98,7 +96,7 @@ const Portfolio = () => {
             description: "Computer vision system for FRC Team 6520 robot, enabling autonomous object detection and targeting for competitive robotics.",
             url: "https://github.com/khooinguyeen/GARTVISION.git",
             github: "https://github.com/khooinguyeen/GARTVISION.git",
-            technologies: ["Python", "OpenCV", "Robotics", "Computer Vision", "Real-time Processing"],
+            technologies: ["Python", "OpenCV", "Robotics", "Computer Vision", "Mediapipe"],
             image: "https://opengraph.githubassets.com/1/khooinguyeen/GARTVISION",
             features: [
                 "Real-time object detection and tracking",
