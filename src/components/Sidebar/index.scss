@@ -133,6 +133,7 @@
   
   .hamburger-icon, .close-icon {
     display: none;
+    color: var(--primary);
   }
   
   
@@ -184,12 +185,28 @@
           top: 20px;
           right: 15px;
           display: block;
+          color: var(--primary);
+          cursor: pointer;
+          transition: all 0.3s ease;
+
+          &:hover {
+            color: var(--accentLight);
+            transform: scale(1.1);
+          }
        }
        .close-icon {
           position: absolute;
           top: 15px;
           right: 15px;
           display: block;
+          color: var(--primary);
+          cursor: pointer;
+          transition: all 0.3s ease;
+
+          &:hover {
+            color: var(--accentLight);
+            transform: rotate(90deg) scale(1.1);
+          }
        }
     }
   }

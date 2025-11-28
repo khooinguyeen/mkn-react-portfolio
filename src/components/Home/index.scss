@@ -248,37 +248,20 @@
     .home-page h1::after {
         display: none;
     }
-    .picture-container {
-        position: relative;
-        width: 280px;
-        height: 280px;
-        top: 30px;
-        right: auto;
-        left: 50%;
-        transform: translateX(-50%);
-        margin: 20px auto;
 
-        &::before,
-        &::after {
-            display: none;
-        }
-
-        .image-wrapper {
-            width: 280px;
-            height: 280px;
-
-            .dot {
-                display: none;
-            }
-        }
-    }
     .home-page {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-top: 60px;
+
         .text-zone {
-            position: initial;
+            position: relative;
             width: 100%;
             transform: none;
-            padding: 10px;
+            padding: 10px 20px;
             box-sizing: border-box;
+            order: 1;
         }
 
         .flat-button {
@@ -287,6 +270,10 @@
             margin: 20px auto 0 auto;
             width: 125px;
         }
+    }
+
+    .picture-container {
+        display: none;
     }
 }
 
@@ -296,28 +283,20 @@
     .home-page h1::after {
         display: none;
     }
-    .picture-container {
-        position: relative;
-        width: 350px;
-        height: 350px;
-        top: 30px;
-        right: auto;
-        left: 50%;
-        transform: translateX(-50%);
-        margin: 20px auto;
 
-        .image-wrapper {
-            width: 320px;
-            height: 320px;
-        }
-    }
     .home-page {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-top: 80px;
+
         .text-zone {
-            position: initial;
+            position: relative;
             width: 100%;
             transform: none;
-            padding: 10px;
+            padding: 10px 30px;
             box-sizing: border-box;
+            order: 1;
         }
 
         .flat-button {
@@ -325,6 +304,23 @@
             display: block;
             margin: 20px auto 0 auto;
             width: 125px;
+        }
+    }
+
+    .picture-container {
+        position: relative;
+        width: 350px;
+        height: 350px;
+        top: auto;
+        right: auto;
+        left: auto;
+        transform: none;
+        margin: 300px auto 30px auto;
+        order: 2;
+
+        .image-wrapper {
+            width: 320px;
+            height: 320px;
         }
     }
 }
