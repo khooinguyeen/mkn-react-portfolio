@@ -54,24 +54,8 @@ const SkillsSphere = () => {
   const [lastPos, setLastPos] = useState({ x: 0, y: 0 });
   const [autoRotate, setAutoRotate] = useState(true);
   const [hoveredSkill, setHoveredSkill] = useState(null);
-  const [windowWidth, setWindowWidth] = useState(typeof window !== 'undefined' ? window.innerWidth : 1200);
 
-  // Update window width on resize
-  useEffect(() => {
-    const handleResize = () => setWindowWidth(window.innerWidth);
-    window.addEventListener('resize', handleResize);
-    return () => window.removeEventListener('resize', handleResize);
-  }, []);
-
-  // Responsive sizing
-  const getResponsiveSize = () => {
-    if (windowWidth <= 600) return { scene: 240, radius: 160 };
-    if (windowWidth <= 768) return { scene: 280, radius: 180 };
-    if (windowWidth <= 1200) return { scene: 400, radius: 240 };
-    return { scene: 600, radius: 280 };
-  };
-
-  const { scene: sceneSize, radius } = getResponsiveSize();
+  const radius = 280;
   const positions = calculatePositions(skills.length, radius);
 
   // Auto rotation
@@ -157,23 +141,22 @@ const SkillsSphere = () => {
 
   const styles = {
     container: {
-      width: windowWidth <= 1200 ? '100%' : '50%',
-      height: windowWidth <= 1200 ? 'auto' : '100%',
+      width: '50%',
+      height: '100%',
       top: 0,
-      paddingTop: windowWidth <= 1200 ? '0' : '5%',
+      paddingTop: '5%',
       marginLeft: 0,
-      position: windowWidth <= 1200 ? 'relative' : 'absolute',
-      right: windowWidth <= 1200 ? 'auto' : 0,
+      position: 'absolute',
+      right: 0,
       overflow: 'hidden',
       cursor: isDragging ? 'grabbing' : 'grab',
       display: 'flex',
       justifyContent: 'center',
       alignItems: 'center',
-      maxWidth: '100vw',
     },
     scene: {
-      width: `${sceneSize}px`,
-      height: `${sceneSize}px`,
+      width: '600px',
+      height: '600px',
       position: 'relative',
       perspective: '1000px',
     },

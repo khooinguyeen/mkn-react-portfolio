@@ -4,9 +4,7 @@
     width: calc(100% - 150px);
     position: initial;
     height: 100%;
-    overflow-y: auto;
-    overflow-x: hidden;
-    max-width: 100vw;
+    overflow: auto;
 
     .portfolio-header {
         display: flex;
@@ -113,8 +111,6 @@
     align-items: center;
     justify-content: center;
     transform: scale(0.7);
-    overflow: hidden;
-    max-width: 100vw;
 }
 
 // The Sun (Center)
@@ -656,8 +652,6 @@
         width: 100%;
         padding: 20px;
         box-sizing: border-box;
-        overflow-x: hidden;
-        max-width: 100vw;
 
         .portfolio-header {
             margin-left: 20px;
@@ -771,12 +765,6 @@
 }
 
 @media screen and (max-width: 768px) {
-    .solar-system-container {
-        transform: scale(0.5);
-        min-height: 400px;
-        overflow: hidden;
-    }
-
     .projects-table {
         thead {
             display: none;
