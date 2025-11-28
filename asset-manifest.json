@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/mkn-react-portfolio/static/css/main.6c873d15.css",
-    "main.js": "/mkn-react-portfolio/static/js/main.e73ab80c.js",
+    "main.css": "/mkn-react-portfolio/static/css/main.53077b92.css",
+    "main.js": "/mkn-react-portfolio/static/js/main.4ebb0367.js",
     "static/js/787.a2cb61a6.chunk.js": "/mkn-react-portfolio/static/js/787.a2cb61a6.chunk.js",
     "static/media/CHUOI 5.png": "/mkn-react-portfolio/static/media/CHUOI 5.ed6c3964c869628b4cb7.png",
     "static/media/tui.jpg": "/mkn-react-portfolio/static/media/tui.fa87179d1df77e99c3ac.jpg",
@@ -11,12 +11,12 @@
     "static/media/CoolveticaRg-Regular.woff": "/mkn-react-portfolio/static/media/CoolveticaRg-Regular.8307bfa187bccdc55f4d.woff",
     "static/media/CoolveticaRg-Regular.woff2": "/mkn-react-portfolio/static/media/CoolveticaRg-Regular.7d1f3b1dd46ad6557a17.woff2",
     "index.html": "/mkn-react-portfolio/index.html",
-    "main.6c873d15.css.map": "/mkn-react-portfolio/static/css/main.6c873d15.css.map",
-    "main.e73ab80c.js.map": "/mkn-react-portfolio/static/js/main.e73ab80c.js.map",
+    "main.53077b92.css.map": "/mkn-react-portfolio/static/css/main.53077b92.css.map",
+    "main.4ebb0367.js.map": "/mkn-react-portfolio/static/js/main.4ebb0367.js.map",
     "787.a2cb61a6.chunk.js.map": "/mkn-react-portfolio/static/js/787.a2cb61a6.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.6c873d15.css",
-    "static/js/main.e73ab80c.js"
+    "static/css/main.53077b92.css",
+    "static/js/main.4ebb0367.js"
   ]
 }
