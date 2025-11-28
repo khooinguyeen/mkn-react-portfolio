@@ -1,6 +1,6 @@
 .theme-switcher {
   position: fixed;
-  top: 20px;
+  bottom: 20px;
   right: 20px;
   z-index: 10000;
 
@@ -43,7 +43,7 @@
 
   .theme-menu {
     position: absolute;
-    top: 60px;
+    bottom: 60px;
     right: 0;
     background: rgba(20, 20, 30, 0.95);
     backdrop-filter: blur(10px);
@@ -96,11 +96,9 @@
         left: 0;
         right: 0;
         bottom: 0;
-        background: linear-gradient(
-          135deg,
-          var(--theme-primary, #ED6165) 0%,
-          var(--theme-secondary, #fff) 100%
-        );
+        background: linear-gradient(135deg,
+            var(--theme-primary, #ED6165) 0%,
+            var(--theme-secondary, #fff) 100%);
         opacity: 0;
         transition: opacity 0.3s ease;
         z-index: -1;
@@ -165,6 +163,7 @@
   from {
     opacity: 0;
   }
+
   to {
     opacity: 1;
   }
@@ -175,6 +174,7 @@
     opacity: 0;
     transform: translateY(-10px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
@@ -184,7 +184,7 @@
 // Responsive design
 @media screen and (max-width: 768px) {
   .theme-switcher {
-    top: 15px;
+    bottom: 15px;
     right: 15px;
 
     .theme-toggle-btn {

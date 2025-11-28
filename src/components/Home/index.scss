@@ -1,10 +1,10 @@
 .home-page {
-    
+
     .text-zone {
         position: absolute;
         left: 10%;
-        top: 50%;
-        transform: translateY(-50%);
+        top: 30%;
+        transform: translateY(-30%);
         width: 40%;
         max-height: 90%;
     }
@@ -78,9 +78,9 @@
     width: 450px;
     height: 450px;
     position: absolute;
-    top: 50%;
+    top: 45%;
     right: 10%;
-    transform: translateY(-50%);
+    transform: translateY(-45%);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -183,25 +183,33 @@
 }
 
 @keyframes float {
-    0%, 100% {
-        transform: translateY(-50%) translateX(0) translateY(0);
+
+    0%,
+    100% {
+        transform: translateY(-45%) translateX(0) translateY(0);
     }
+
     25% {
-        transform: translateY(-50%) translateX(-15px) translateY(-15px);
+        transform: translateY(-45%) translateX(-15px) translateY(-15px);
     }
+
     50% {
-        transform: translateY(-50%) translateX(0) translateY(-25px);
+        transform: translateY(-45%) translateX(0) translateY(-25px);
     }
+
     75% {
-        transform: translateY(-50%) translateX(15px) translateY(-15px);
+        transform: translateY(-45%) translateX(15px) translateY(-15px);
     }
 }
 
 @keyframes pulse-glow {
-    0%, 100% {
+
+    0%,
+    100% {
         opacity: 0.3;
         transform: scale(1);
     }
+
     50% {
         opacity: 0.6;
         transform: scale(1.15);
@@ -213,18 +221,22 @@
         transform: rotate(0deg) scale(1);
         opacity: 0.7;
     }
+
     25% {
         transform: rotate(90deg) scale(1.05);
         opacity: 0.85;
     }
+
     50% {
         transform: rotate(180deg) scale(1);
         opacity: 0.7;
     }
+
     75% {
         transform: rotate(270deg) scale(1.05);
         opacity: 0.85;
     }
+
     100% {
         transform: rotate(360deg) scale(1);
         opacity: 0.7;
@@ -232,10 +244,13 @@
 }
 
 @keyframes float-dot {
-    0%, 100% {
+
+    0%,
+    100% {
         transform: translateY(0) scale(1);
         opacity: 0.5;
     }
+
     50% {
         transform: translateY(-25px) scale(1.5);
         opacity: 1;
@@ -243,11 +258,13 @@
 }
 
 @media screen and (max-width: 600px) {
+
     .tags,
     .home-page h1::before,
     .home-page h1::after {
         display: none;
     }
+
     .picture-container {
         position: relative;
         width: 280px;
@@ -272,6 +289,7 @@
             }
         }
     }
+
     .home-page {
         .text-zone {
             position: initial;
@@ -291,11 +309,13 @@
 }
 
 @media screen and (max-width: 1200px) and (min-width: 600px) {
+
     .tags,
     .home-page h1::before,
     .home-page h1::after {
         display: none;
     }
+
     .picture-container {
         position: relative;
         width: 350px;
@@ -311,6 +331,7 @@
             height: 320px;
         }
     }
+
     .home-page {
         .text-zone {
             position: initial;
@@ -328,5 +349,3 @@
         }
     }
 }
-
-
