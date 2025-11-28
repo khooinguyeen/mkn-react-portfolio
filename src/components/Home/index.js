@@ -1,5 +1,4 @@
 import { useEffect, useState } from 'react'
-import { Link } from 'react-router-dom'
 import AnimatedLetters from '../AnimatedLetters'
 // import LogoTitle from '../../assets/images/logo-s.png'
 // import Logo from './Logo'
@@ -63,7 +62,13 @@ const Home = () => {
                     />
                 </h1>
                 <h2>a Computer Science student who is passionate about programming, especially using it to solve problem in life</h2>
-                <Link to="/contact" className='flat-button'>CONTACT ME</Link>
+                <a
+                    href="/mkn-react-portfolio/Khoi_Nguyen_Mai_Resume.pdf"
+                    download="Nguyen_Julian_CV.pdf"
+                    className='flat-button'
+                >
+                    DOWNLOAD CV
+                </a>
             </div>
             {/* <Logo /> put image here */}
             {/* <img src={myPicture} alt="tui"/> */}
