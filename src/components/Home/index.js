@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react'
 import AnimatedLetters from '../AnimatedLetters'
 // import LogoTitle from '../../assets/images/logo-s.png'
 // import Logo from './Logo'
-import myPicture from '../../assets/images/tui.jpg'
+import myPicture from '../../assets/images/me.jpg'
 import './index.scss'
 import Loader from 'react-loaders'
 const Home = () => {
