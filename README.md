@@ -9,9 +9,9 @@ Visit the live website: [https://khooinguyeen.github.io/mkn-react-portfolio](htt
 ## Features
 
 - **Multiple Portfolio Views:**
-  - 🌌 Galaxy View: Interactive 3D planets orbiting in space
-  - 🎨 Grid View: Clean card-based layout
-  - 📋 List View: Detailed table format
+  - Galaxy View: Interactive 3D planets orbiting in space
+  - Grid View: Clean card-based layout
+  - List View: Detailed table format
 
 - **Dynamic Theming:**
   - Multiple pre-configured color themes
@@ -332,7 +332,7 @@ This project is open source and available under the [MIT License](LICENSE).
 
 ## Contact
 
-**Khoi Nguyen (Julian)**
+**Khoi Nguyen Mai**
 
 - GitHub: [@khooinguyeen](https://github.com/khooinguyeen)
 - Portfolio: [https://khooinguyeen.github.io/mkn-react-portfolio](https://khooinguyeen.github.io/mkn-react-portfolio)
