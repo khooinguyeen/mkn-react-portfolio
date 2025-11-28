@@ -155,6 +155,9 @@
         display: flex;
         flex-direction: column;
         padding-top: 60px;
+        overflow-x: hidden;
+        max-width: 100vw;
+        box-sizing: border-box;
 
         .text-zone {
             position: relative !important;
@@ -166,26 +169,20 @@
             box-sizing: border-box;
             order: 1;
         }
+    }
+}
 
-        // Target the SkillsSphere container
-        > div[style*="position: absolute"] {
-            position: relative !important;
-            width: 100% !important;
-            height: auto !important;
-            min-height: 400px;
-            top: auto !important;
-            right: auto !important;
-            left: auto !important;
-            margin: 30px auto 20px auto !important;
-            padding-top: 0 !important;
-            order: 2;
+@media screen and (max-width: 768px) {
+    .about-page {
+        padding-top: 50px;
 
-            // Target the scene div inside
-            > div {
-                width: 100% !important;
-                max-width: 400px;
-                height: 400px !important;
-                margin: 0 auto;
+        .text-zone {
+            h1 {
+                font-size: 45px !important;
+            }
+
+            p {
+                font-size: 13px !important;
             }
         }
     }
@@ -204,16 +201,6 @@
 
             p {
                 font-size: 12px !important;
-            }
-        }
-
-        // Smaller sphere on mobile
-        > div[style*="position: absolute"] {
-            min-height: 300px;
-
-            > div {
-                max-width: 300px !important;
-                height: 300px !important;
             }
         }
     }

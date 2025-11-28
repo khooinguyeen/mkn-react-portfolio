@@ -2,6 +2,8 @@
     width: 100%;
     height: 100%;
     position: absolute;
+    overflow-x: hidden;
+    max-width: 100vw;
 }
 
 .top-tags {
@@ -36,6 +38,8 @@
     transform-style: preserve-3d;
     animation: fadeIn 1s forwards;
     animation-delay: 1s;
+    overflow-x: hidden;
+    max-width: 100vw;
 }
 
 .container.about-page,

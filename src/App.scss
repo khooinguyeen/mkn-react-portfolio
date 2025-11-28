@@ -21,6 +21,15 @@ $primary-color: #ED6165;
   transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
 }
 
+html, body {
+  overflow-x: hidden;
+  max-width: 100%;
+}
+
+body {
+  position: relative;
+}
+
 @import 'animate.css';
 // @import '~loaders.css/src/animations/pacman.scss';
 @import '~loaders.css/src/animations/ball-clip-rotate-multiple.scss';
