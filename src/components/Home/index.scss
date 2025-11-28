@@ -1,5 +1,5 @@
 .home-page {
-    
+    overflow: hidden;
     .text-zone {
         position: absolute;
         left: 10%;
@@ -44,6 +44,7 @@
     h2 {
         color: var(--textSecondary);
         margin-top: 20px;
+        margin-right: 20%;
         font-weight: 400;
         font-size: 11px;
         font-family: sans-serif;
@@ -268,12 +269,25 @@
             float: none;
             display: block;
             margin: 20px auto 0 auto;
-            width: 125px;
+            width: 130px;
         }
     }
 
     .picture-container {
-        display: none;
+        position: relative;
+        width: 350px;
+        height: 350px;
+        top: auto;
+        right: auto;
+        left: auto;
+        transform: none;
+        margin: 300px auto 30px auto;
+        order: 2;
+
+        .image-wrapper {
+            width: 320px;
+            height: 320px;
+        }
     }
 }
 
