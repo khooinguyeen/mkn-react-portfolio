@@ -4,7 +4,8 @@
     width: calc(100% - 150px);
     position: initial;
     height: 100%;
-    overflow: hidden;
+    overflow-y: auto;
+    overflow-x: hidden;
 
     .portfolio-header {
         display: flex;
