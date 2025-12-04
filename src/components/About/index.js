@@ -65,13 +65,12 @@ const SkillsSphere = () => {
 
   // Responsive sizing - much smaller on mobile
   const getResponsiveSize = () => {
-    // if (windowWidth <= 600) return { scene: 300, radius: 180 };      // Small phones
-    // if (windowWidth <= 768) return { scene: 200, radius: 130 };      // Large phones
-    if (windowWidth <= 1200) return { scene: 300, radius: 180 };     // Tablets
-    return { scene: 600, radius: 280 };                              // Desktop
+    if (windowWidth <= 600) return { scene: 300, radius: 200, scale: 0.7 };      // Small phones
+    if (windowWidth <= 1200) return { scene: 300, radius: 280, scale: 0.8 };     // Tablets
+    return { scene: 600, radius: 280, scale: 1 };                              // Desktop
   };
 
-  const { scene: sceneSize, radius } = getResponsiveSize();
+  const { scene: sceneSize, radius, scale } = getResponsiveSize();
   const positions = calculatePositions(skills.length, radius);
 
   // Auto rotation
@@ -178,6 +177,8 @@ const SkillsSphere = () => {
       height: `${sceneSize}px`,
       position: 'relative',
       perspective: '1000px',
+      transform: `scale(${scale})`,
+      transformOrigin: `center center`,
     },
     sphere: {
       width: '100%',
@@ -227,6 +228,7 @@ const SkillsSphere = () => {
       textTransform: 'uppercase',
     }),
     connection: (pos) => {
+      // Calculate length in 3D space
       const length = Math.sqrt(pos.x ** 2 + pos.y ** 2);
       const angle = Math.atan2(pos.y, pos.x) * (180 / Math.PI);
 
@@ -250,8 +252,8 @@ const SkillsSphere = () => {
         height: '1px',
         background: `linear-gradient(90deg, ${hexToRgba(primaryColor, 0.6)}, ${hexToRgba(primaryColor, 0.1)})`,
         transformOrigin: '0 50%',
-        transform: `rotate(${angle}deg)`,
-        zIndex: 1,
+        transform: `rotate(${angle}deg) translateZ(${pos.z}px)`,
+        zIndex: Math.round(pos.z) + 1,
         opacity: pos.z < -100 ? 0.1 : 0.4,
       };
     },

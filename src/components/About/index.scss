@@ -202,17 +202,17 @@
             }
 
             p {
-                font-size: 12px !important;
+                font-size: 18px !important;
             }
         }
 
         // Smaller sphere on mobile
         > div[style*="position: absolute"] {
-            min-height: 300px;
+            min-height: 260px;
 
             > div {
-                max-width: 300px !important;
-                height: 300px !important;
+                max-width: 260px !important;
+                height: 260px !important;
             }
         }
     }
